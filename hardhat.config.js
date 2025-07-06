@@ -1,17 +1,28 @@
 require("@nomicfoundation/hardhat-toolbox");
 require("dotenv").config();
 
-/** @type import('hardhat/config').HardhatUserConfig */
 module.exports = {
   solidity: "0.8.28",
   networks: {
     scroll: {
       url: process.env.SCROLL_RPC,
       accounts: [`0x${process.env.PRIVATE_KEY}`],
+      chainId: 534351
     },
-    // local para hardhat node
-    localhost: {
-      url: "http://127.0.0.1:8545",
-    }
+  },
+  etherscan: {
+    apiKey: {
+      scroll: "blockscout"  // cualquier string para evitar el error
+    },
+    customChains: [
+      {
+        network: "scroll",
+        chainId: 534351,
+        urls: {
+          apiURL: "https://sepolia-blockscout.scroll.io/api",
+          browserURL: "https://sepolia.scrollscan.com"
+        }
+      }
+    ]
   }
 };
