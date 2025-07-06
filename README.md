@@ -11,7 +11,7 @@ La solución incluye:
 
 ---
 
-## Información del contrato
+## 📝 Información del contrato
 - Cuenta: 0xC6B48dC3853C5FaE2F559057190eba48624Af59f
 - SimpleDEX desplegado en: 0xDbda51207ae73A392518592063806dd8Cf9Aeba0
 - TokenA desplegado en: 0x4D0708df022E286F3C2c761F6dAe7a00c9C69AA1
